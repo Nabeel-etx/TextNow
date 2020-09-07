@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import db from "./firebase"
 import { useStateValue } from './StateProvider'
 import { actionTypes } from "./reducer";
+import SettingsIcon from '@material-ui/icons/Settings';
 import UseWindowDimensions from "./UseWindowDimensions";
 import Loader from "./Loader"
 
@@ -64,17 +65,10 @@ function Sidebar() {
                     <MenuIcon />
                 </IconButton>
                     <div className="sidebar__header">
-
                         <Avatar src={photoURL}/>
                         <div className="sidebar__headerRight">
                             <IconButton>
-                                <DonutLargeIcon />
-                            </IconButton>
-                            <IconButton>
-                                <ChatIcon />
-                            </IconButton>
-                            <IconButton>
-                                <MoreVertIcon />
+                            <SettingsIcon/>
                             </IconButton>
                         </div>
                     </div>
@@ -82,7 +76,7 @@ function Sidebar() {
                     <div className="sidebar__search">
                         <div className="sidebar__searchContainer">
                         <SearchOutlined/>
-                        <input placeholder="Search or Start a new chat" type="text"/>
+                        <input placeholder="Search chat" type="text"/>
                         </div>
                     </div>
                     <div className="sidebar__chats">
@@ -99,22 +93,21 @@ function Sidebar() {
                     <div className={"sidebar"}>
                     <div className="sidebar__header">
                 <Avatar src={photoURL}/> <p className="sidebar__greeting">{}</p>
+                <div className="outer__logout">
+                    <div className="logout">
+                        <p>Sign-out</p>
+                    </div>
+                </div>
                         <div className="sidebar__headerRight">
                             <IconButton>
-                                <DonutLargeIcon />
-                            </IconButton>
-                            <IconButton>
-                                <ChatIcon />
-                            </IconButton>
-                            <IconButton>
-                                <MoreVertIcon />
+                                <SettingsIcon/>
                             </IconButton>
                         </div>
                     </div>
                     <div className="sidebar__search">
                         <div className="sidebar__searchContainer">
                         <SearchOutlined/>
-                        <input placeholder="Search or Start a new chat" type="text"/>
+                        <input placeholder="Search chat" type="text"/>
                         </div>
                     </div>
                     <div className="sidebar__chats">

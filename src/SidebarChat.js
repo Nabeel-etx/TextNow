@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import { useStateValue } from './StateProvider'
 import { actionTypes } from "./reducer";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
-import firebase from "firebase"
+import firebase from "firebase";
+
+
 function SidebarChat(props) {
     const [seed, setSeed] = useState("");
     const {addNewChatVal,name,id}=props;
@@ -70,8 +72,10 @@ function SidebarChat(props) {
         </Link>
 
     ) : (
-            <div onClick={createChat} className="sidebarChat addnew__chat">
-                <h2>Add New Room</h2><AddCircleIcon/>
+            <div onClick={createChat} className="sidebarChat__addnew__chat">
+                <div className="outer__layer">
+                <h2>Add Room</h2><AddCircleIcon/>
+                </div>
             </div>
         );
 }

@@ -6,6 +6,7 @@ import SearchOutlined from "@material-ui/icons/SearchOutlined";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import MicIcon from "@material-ui/icons/Mic";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 import db from "./firebase"
 import firebase from "firebase"
 import "./Chat.css"
@@ -112,15 +113,9 @@ function Chat() {
                     <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
                     <div className="chat__headerInfo">
                         <h3>{roomName}</h3>
-                        <p className="header__lastSeen">last seen {messages.length!==0?(messages[messages.length-1].timestamp?.toDate().toUTCString()):"Loading"}</p>
+                        <p className="header__lastSeen">Last Online: {messages.length!==0?(messages[messages.length-1].timestamp?.toDate().toUTCString()):"Loading"}</p>
                     </div>
                     <div className="chat__headerRight">
-                        <IconButton>
-                            <SearchOutlined />
-                        </IconButton>
-                        <IconButton>
-                            <AttachFile />
-                        </IconButton>
                         <IconButton>
                             <MoreVertIcon />
                         </IconButton>
@@ -138,15 +133,9 @@ function Chat() {
                     <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
                     <div className="chat__headerInfo">
                         <h3>{roomName}</h3>
-                        <p className="header__lastSeen">last seen {messages.length!==0?(String(messages[messages.length-1].timestamp?.toDate().toUTCString()).slice(0,22)) :"Loading"}</p>
+                        <p className="header__lastSeen">Last Online: {messages.length!==0?(String(messages[messages.length-1].timestamp?.toDate().toUTCString()).slice(0,22)) :"Loading"}</p>
                     </div>
                     <div className="chat__headerRight">
-                        <IconButton>
-                            <SearchOutlined />
-                        </IconButton>
-                        <IconButton>
-                            <AttachFile />
-                        </IconButton>
                         <IconButton>
                             <MoreVertIcon />
                         </IconButton>
@@ -164,13 +153,13 @@ function Chat() {
     
                 <div className="chat__footer">
                     <IconButton>
-                    <InsertEmoticonIcon/>
                     </IconButton>
                     <form>
                         <input value={input} type="text" placeholder="Type a message" onChange={e=>setInput(e.target.value)}/>
                         <button type="submit" onClick={sendMessage} >Send A message</button>
                     </form>
                     <IconButton>
+                    <InsertEmoticonIcon/>
                    <MicIcon/>
                     </IconButton>
     
@@ -178,13 +167,14 @@ function Chat() {
 
                 <div className="chat__footer__absolute">
                     <IconButton>
-                    <InsertEmoticonIcon/>
+                    <AddCircleIcon/>
                     </IconButton>
                     <form>
                         <input value={input} type="text" placeholder="Type a message" onChange={e=>setInput(e.target.value)}/>
                         <button type="submit" onClick={sendMessage} >Send A message</button>
                     </form>
                     <IconButton>
+                    <InsertEmoticonIcon/>
                    <MicIcon/>
                     </IconButton>
     
@@ -198,15 +188,9 @@ function Chat() {
                     <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`} />
                     <div className="chat__headerInfo">
                         <h3>{roomName}</h3>
-                        <p className="header__lastSeen">last seen {messages.length!==0?(String(messages[messages.length-1].timestamp?.toDate().toUTCString()).slice(0,22) ):"Loading"}</p>
+                        <p className="header__lastSeen">Last Online: {messages.length!==0?(String(messages[messages.length-1].timestamp?.toDate().toUTCString()).slice(0,22) ):"Loading"}</p>
                     </div>
                     <div className="chat__headerRight">
-                        <IconButton>
-                            <SearchOutlined />
-                        </IconButton>
-                        <IconButton>
-                            <AttachFile />
-                        </IconButton>
                         <IconButton>
                             <MoreVertIcon />
                         </IconButton>
@@ -224,13 +208,14 @@ function Chat() {
     
                 <div className="chat__footer">
                     <IconButton>
-                    <InsertEmoticonIcon/>
+                    <AddCircleIcon/>
                     </IconButton>
                     <form>
                         <input value={input} type="text" placeholder="Type a message" onChange={e=>setInput(e.target.value)}/>
                         <button type="submit" onClick={sendMessage} >Send A message</button>
                     </form>
                     <IconButton>
+                    <InsertEmoticonIcon/>
                    <MicIcon/>
                     </IconButton>
     

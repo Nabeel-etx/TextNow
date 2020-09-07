@@ -1,38 +1,73 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    flex: 0.35;
+    flex: 0.20;
+    background-color: #40454d;
 }
 .sidebar__header{
     display: flex;
+    justify-items: center;
     justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 20px;
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #40454d;
 }
+.outer__logout{
+    padding-top: 10px;
+}
+
+.logout{
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    width: 70px;
+    background-color: #2E3135;
+    color: lightgray;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.logout > p{
+    font-weight: 200;
+    font-size: small;
+}
+
+.sidebar__header .MuiSvgIcon-root{
+    color: lightgray;
+}
+
+.sidebar__header .MuiSvgIcon-root :hover{
+    color: white;
+}
+
 .sidebar__search{
     display: flex;
     align-items: center;
-    background-color: #dadadace;
+    background-color: #40454d;
     height: 39px;
-    padding: 10px;
+    padding: 5px;
+    color: lightgray;
 }
 .sidebar__searchContainer{
     display: flex;
     align-items: center;
-    background-color: white;
-    width: 100%;
+    background-color: #2E3135;
+    width: 90%;
     height:35px;
     border-radius:20px;
+    color: lightgray;
 }
 .sidebar__searchContainer .MuiSvgIcon-root{
     color: gray;
     padding: 10px;
 }
+
 .sidebar__searchContainer input{
     border:none;
-    margin-left: 10px;
+    margin-left: 5px;
     width: 80%;
- 
+    background-color: #2E3135;
+    color: lightgray;
 }
 .sidebar__searchContainer input:focus{
     border: none;
@@ -41,20 +76,39 @@
 .sidebar__headerRight{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-width: 10vw;
+    justify-content: space-evenly;
+    min-width: 5vw;
 }
 .sidebar__headerRight  >.MuiSvgIcon-root{
     margin-right:2vw;
     font-size: 24px !important;
+    color: white;
 }
 .sidebar__chats{
     flex: 1;
-    background-color: white;
+    background-color: #2E3135;
     overflow:scroll;
     position: relative;
     overflow-x: hidden;
 }
+/**********************************************************************/
+
+.sidebar__chats::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+.sidebar__chats::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #4F545C;
+}
+ 
+.sidebar__chats::-webkit-scrollbar-thumb {
+  background: #2E3135;
+  outline: 1px solid slategrey;
+}
+
+/**********************************************************************/
+
 .hide__sidebar{
     display: none;
 }
@@ -64,7 +118,7 @@
 .sidebar__greeting{
     font-size:14px;
     font-weight: bolder;
-    color: red;
+    color: white;
 }
 @media(max-width:628px){
     .sidebar{
