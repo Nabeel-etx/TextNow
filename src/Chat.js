@@ -22,7 +22,7 @@ function Chat() {
     const [seed, setSeed] = useState("");
     const [input, setInput] = useState("");
     const {roomId}=useParams();
-    const [roomName,setRoomName]=useState("false");
+    const [roomName,setRoomName]=useState("");
     const [messages,setMessages]=useState([]);
     const [toggler, setToggler]=useState(true)
     const displayName =localStorage.getItem('displayName');

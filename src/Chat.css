@@ -35,7 +35,7 @@
     max-width: 40vw;
     margin-bottom: 20px;
     margin-top: 5px;
-    background-color: rgb(196, 196, 196);
+    background-color: #535861;
     overflow-wrap: anywhere;
 }
 
@@ -79,11 +79,12 @@
 }
  
 .chat__body::-webkit-scrollbar-track {
-    background: #4F545C;
+    background: #2E3135;
 }
 
+
 .chat__body::-webkit-scrollbar-thumb {
-  background: #2E3135;
+  background: #4F545C;
   outline: 1px solid slategrey;
 }
 

@@ -12,7 +12,8 @@ import { useStateValue } from './StateProvider'
 import { actionTypes } from "./reducer";
 import SettingsIcon from '@material-ui/icons/Settings';
 import UseWindowDimensions from "./UseWindowDimensions";
-import Loader from "./Loader"
+import Loader from "./Loader";
+import Login from "./Login";
 
 function Sidebar() {
         const [rooms,setRooms] = useState([]);
