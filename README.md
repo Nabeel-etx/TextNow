@@ -1,3 +1,5 @@
+## Demo: https://rebrand.ly/text-Now
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Change Firebase config to your project config
